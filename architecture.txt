@@ -1,0 +1,15 @@
+RMI to communicate between user clients and front-end server
+Front-end server: makes use of both rmi and jgroups
+Data should be saved in the 3 replicas(back end servers), not the front-end server
+Back-End servers:replicas that each have the data passed from the user clients to the front end server to 
+the replicas.
+
+front-end design and implementation left to us.
+
+
+to send data from front-end to back-end i can create a struct object that holds the data and send this single
+object instead of sending every variable one by one 
+
+use send method of jgroups, but add argument for type of data. That way we'll know what the data is for. 
+Create everything that is in implementation actually in the backend servers. 
+Send an array separated by whitespace , each index is a different auction data
